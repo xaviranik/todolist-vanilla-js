@@ -1,11 +1,11 @@
 const todoInput = document.querySelector("#todo-input");
-const addTaskBtn = document.querySelector("#task-add-btn");
+const addTodoBtn = document.querySelector("#task-add-btn");
 const todos = document.querySelector(".todos");
 
-addTaskBtn.addEventListener("click", function (e) {
+addTodoBtn.addEventListener("click", function (e) {
   e.preventDefault();
   let text = todoInput.value;
-  addTask(text);
+  addTodo(text);
 });
 
 todos.addEventListener("click", function (e) {
@@ -19,7 +19,7 @@ todos.addEventListener("click", function (e) {
   }
 });
 
-function addTask(text) {
+function addTodo(text) {
   // Icons
   let checkIcon = `<svg class="h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>`;
   let trashIcon = `<svg class="h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>`;
@@ -60,7 +60,7 @@ function addTask(text) {
     "py-1",
     "text-white",
     "rounded-lg",
-    "ml-2",
+    "ml-1",
     "focus:outline-none",
     "text-sm",
     "text-gray-700"
