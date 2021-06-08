@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/main.css" />
+  </head>
+  <body>
+    <div
+      class="
+        bg-gray-200
+        text-gray-800
+        flex
+        items-center
+        h-screen
+        justify-center
+      "
+    >
+      <div class="w-1/2">
+        <h1 class="flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.4"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+            />
+          </svg>
+          <div class="text-4xl font-base ml-2">Todo List</div>
+        </h1>
+        <div class="flex">
+          <div class="w-full flex justify-center mt-6">
+            <input
+              autocomplete="off"
+              class="
+                text-gray-600 text-xl
+                px-6
+                py-4
+                bg-white
+                rounded-l-lg
+                w-full
+                shadow-md
+                transition
+                duration-300
+                ease-in-out
+                focus:outline-none
+                hover:shadow-xl
+              "
+              type="text"
+              id="todo-input"
+              placeholder="Things to do..."
+            />
+            <button
+              class="
+                bg-gray-800
+                px-6
+                text-white
+                rounded-r-lg
+                shadow-md
+                hover:bg-gray-900
+              "
+              id="task-add-btn"
+            >
+              <svg
+                class="h-8"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <ul class="todos"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>
